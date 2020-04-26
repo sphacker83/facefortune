@@ -2,6 +2,13 @@
 <html>
 
 <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -29,7 +36,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">연애운</a>
                 </li>
-				<li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="#">직업운</a>
                 </li>
             </ul>
@@ -44,7 +51,8 @@
         <div class="image-upload-wrap">
             <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
             <div class="drag-text">
-                <h3>어디 보자...<br>그 자네의 사진을 좀 내어 보게나</h3>
+                <h3>어디 보자...
+                    <br>자네의 사진을 내어 보게나</h3>
             </div>
         </div>
         <div class="file-upload-content">
@@ -108,7 +116,7 @@
                 var reader = new FileReader();
                 reader.onload = function(e) {
                     $('.image-upload-wrap').hide();
-					$('.image-title-wrap').hide();
+                    $('.image-title-wrap').hide();
                     $('.file-upload-image').attr('src', e.target.result);
                     $('.file-upload-content').fadeIn(3000);
                     $('.image-title').html(input.files[0].name);
@@ -117,7 +125,7 @@
                 init().then(function() {
                     predict();
                     $('#loading').hide();
-					$('.image-title-wrap').fadeIn(500);
+                    $('.image-title-wrap').fadeIn(500);
                 });
             } else {
                 removeUpload();
@@ -128,9 +136,9 @@
             $('.file-upload-input').replaceWith($('.file-upload-input').clone());
             $('.file-upload-content').hide();
             $('.image-upload-wrap').show();
-			$('#loading').show();
-			$('#label-container').html("");
-			$('.image-title-wrap').hide();
+            $('#loading').show();
+            $('#label-container').html("");
+            $('.image-title-wrap').hide();
         }
         $('.image-upload-wrap').bind('dragover', function() {
             $('.image-upload-wrap').addClass('image-dropping');
