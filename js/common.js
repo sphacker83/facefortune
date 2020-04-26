@@ -14,7 +14,7 @@ function readURL(input) {
 
         EXIF.getData(fileInfo, () => {
             const orientation = EXIF.getTag(fileInfo, 'Orientation');
-            console.log(orientation);
+            $('#orient').html("Orient : " + orientation);
 			console.log(fileInfo);
 
 			var image = document.getElementById("face");
