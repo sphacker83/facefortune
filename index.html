@@ -18,13 +18,13 @@
         <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">사진을 올리세요</button>
 
         <div class="image-upload-wrap">
-            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+            <!-- <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" /> -->
             <div class="drag-text">
+				<h3>여기를 눌러 사진을 업로드 하세요</h3>
             </div>
         </div>
         <div class="file-upload-content">
             <img class="file-upload-image" id="face" src="#" alt="your image" />
-			<h3>사진을 업로드 하세요</h3>
             <div id="loading" class="animated bounce">
                 <div class="spinner-border" role="status">
                     <span class="sr-only">Loading...</span>
